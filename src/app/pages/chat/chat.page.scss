@@ -1,0 +1,45 @@
+/* src/pages/chat/chat.page.scss */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 10px;
+  }
+  
+  /* Mensagens recebidas */
+  .message.received {
+    align-self: flex-start;
+    background-color: #e5ecf1;
+    color: #394752;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;
+    max-width: 70%;
+  }
+  
+  /* Mensagens enviadas */
+  .message.sent {
+    align-self: flex-end;
+    background-color: #394752;
+    color: #e5ecf1;
+    padding: 10px;
+    border-radius: 10px 10px 0 10px;
+    max-width: 70%;
+  }
+  
+  /* Personalizando o rodapé (barra de envio de mensagens) */
+  ion-footer {
+    --background: #f0f4f8;
+  }
+  
+  ion-item {
+    --background: #ffffff;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  ion-input {
+    padding-left: 10px;
+  }
+  
