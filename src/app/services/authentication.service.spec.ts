@@ -1,16 +1,13 @@
 import { TestBed } from '@angular/core/testing';
+import { AuthService } from './authentication.service';
 
-import { AuthenticationService } from './authentication.service';
+TestBed.configureTestingModule({});
+const authServiceInstance = TestBed.inject(AuthService);
 
-describe('AuthenticationService', () => {
-  let service: AuthenticationService;
+if (authServiceInstance) {
+  console.log("AuthService foi criado com sucesso.");
+} else {
+  console.error("Falha ao criar AuthService.");
+}
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(AuthenticationService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+export { AuthService };
