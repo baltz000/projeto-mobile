@@ -1,20 +1,13 @@
-// src/app/authentication.service.ts
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import firebase from 'firebase/compat/app';
+import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root',
-})
+}) 
 export class AuthService {
-  constructor(private afAuth: AngularFireAuth) {}
+  constructor(private auth: Auth) {}
 
-  // Exemplo de método para fazer login com Google
-  signInWithGoogle() {
-    return this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  }
-
-  signOut() {
-    return this.afAuth.signOut();
+  register(email: string, password: string) {
+    return createUserWithEmailAndPassword(this.auth, email, password);
   }
 }

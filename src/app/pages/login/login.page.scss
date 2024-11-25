@@ -5,10 +5,21 @@
   ion-toolbar {
     --background: transparent;
   
-    ion-title {
-      padding: 20px 0 46px 0;
-      font-weight: 900;
+    .logo-container {
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center;    /* Centraliza verticalmente */
+      margin-top: 20px;       /* Ajusta o espaço no topo */
     }
+    
+    .logo-image {
+      width: 150px;           /* Define largura da imagem */
+      height: 150px;          /* Define altura igual para formar um círculo */
+      border-radius: 50%;     /* Torna a imagem circular */
+      object-fit: cover;      /* Garante que a imagem se ajuste corretamente */
+      border: 2px solid #8295A3; /* Adiciona uma borda opcional */
+    }
+    
   
     p {
       padding: 40px 0 20px 0;
@@ -46,7 +57,7 @@
     }
   
     form {
-      margin-top: 100px;
+      margin-top: 20px;
     }
   
     .wrap-input {
@@ -98,3 +109,5 @@
   
   
   }
+ 
+  

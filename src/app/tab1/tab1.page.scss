@@ -80,5 +80,21 @@ ion-content {
     ion-icon {
       vertical-align: middle;
     }
-  }
+  
+    .logo-container {
+      position: absolute; /* Garante o posicionamento no canto superior direito */
+      top: 10px;          /* Ajusta a posição vertical */
+      right: 10px;        /* Ajusta a posição horizontal */
+      z-index: 10;        /* Mantém a logo acima de outros elementos */
+    }
+    
+    .logo-image {
+      width: 40px !important;        /* Reduz o tamanho da logo */
+      height: 40px !important;       /* Mantém a altura proporcional */
+      border-radius: 50%;            /* Garante o formato circular */
+      object-fit: cover;             /* Ajusta o conteúdo da imagem no círculo */
+      display: block;                /* Garante que seja renderizada como bloco */
+    }
+    
+}
 }

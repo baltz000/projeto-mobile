@@ -3,7 +3,9 @@
 <ion-header class="ion-no-border">
 	<ion-toolbar>
     <div class="back-circle"></div>
-		<ion-title class="ion-text-center custom-font">Logo</ion-title>
+		<div class="logo-container">
+      <img src="assets/images/veritas-logo.png" alt="Veritas Logo" class="logo-image" />
+    </div>
 	</ion-toolbar>
 </ion-header>
 
@@ -17,26 +19,26 @@
 <div class="ion-padding">
 
   <form class="ion-padding">
-
     <div class="wrap-input">
-    <input class="input" type="text" name="user-email" placeholder="Email">
+      <ion-input [(ngModel)]="email" class="input" type="text" name="user-email" placeholder="Email"></ion-input>
     </div>
-
+    
     <div class="wrap-input">
-    <input class="input" type="password" name="password" placeholder="Senha">
-    </div> 
-
+      <ion-input [(ngModel)]="password" class="input" type="password" name="password" placeholder="Senha"></ion-input>
+    </div>
+    
     <div class="container-form-btn">
-      <button  routerLink="/tabs" routerDirection="root" class="form-btn custom-font">
+      <ion-button (click)="login()" >
         Login
-      </button>
-    </div>   
+      </ion-button>
+    </div>
+    
 <br>
   <ion-title class="ion-text-center custom-font">ou</ion-title>
 <br>
     
     <div class="container-form-btn">
-      <button class="form-btn custom-font">
+      <button class="form-btn custom-font" (click)="loginWithGoogle()">
        continuar com  <ion-icon name="logo-google" slot="end"></ion-icon>
       </button>
     </div>  
@@ -57,6 +59,6 @@
 
 <ion-footer class="ion-no-border">
 	<ion-toolbar>
-		<p class="ion-text-center custom-font">Não tem uma conta? <a href="#">Registre-se<br><br>Esqueceu a senha?</a></p>
+		<p class="ion-text-center custom-font">Não tem uma conta? <a routerLink="/cadastro">Registre-se<br><br>Esqueceu a senha?</a></p>
 	</ion-toolbar>
 </ion-footer>
